@@ -1,0 +1,6 @@
+@delily_HostAddress = http://localhost:5105
+
+GET {{delily_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
