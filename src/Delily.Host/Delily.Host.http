@@ -1,0 +1,16 @@
+@host = http://localhost:5105
+
+GET {{host}}/
+Accept: application/json
+
+###
+
+GET {{host}}/health/live
+Accept: text/plain
+
+###
+
+GET {{host}}/health/ready
+Accept: text/plain
+
+###
