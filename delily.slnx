@@ -1,3 +1,18 @@
 <Solution>
-  <Project Path="delily/delily.csproj" />
+  <Project Path="src/Delily.Host/Delily.Host.csproj" />
+  <Project Path="src/Delily.Api/Delily.Api.csproj" />
+  <Project Path="src/Delily.Abuse/Delily.Abuse.csproj" />
+  <Project Path="src/Delily.Auth/Delily.Auth.csproj" />
+  <Project Path="src/Delily.Delivery/Delily.Delivery.csproj" />
+  <Project Path="src/Delily.Mime/Delily.Mime.csproj" />
+  <Project Path="src/Delily.Observability/Delily.Observability.csproj" />
+  <Project Path="src/Delily.Protocols.Imap/Delily.Protocols.Imap.csproj" />
+  <Project Path="src/Delily.Protocols.Jmap/Delily.Protocols.Jmap.csproj" />
+  <Project Path="src/Delily.Protocols.Smtp/Delily.Protocols.Smtp.csproj" />
+  <Project Path="src/Delily.Queue/Delily.Queue.csproj" />
+  <Project Path="src/Delily.Storage/Delily.Storage.csproj" />
+  <Project Path="src/Delily.Transport/Delily.Transport.csproj" />
+  <Project Path="tests/Delily.UnitTests/Delily.UnitTests.csproj" />
+  <Project Path="tests/Delily.IntegrationTests/Delily.IntegrationTests.csproj" />
+  <Project Path="tests/Delily.ConformanceTests/Delily.ConformanceTests.csproj" />
 </Solution>

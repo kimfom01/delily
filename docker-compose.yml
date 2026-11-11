@@ -1,0 +1,41 @@
+name: delily
+
+services:
+  # Development credentials only. Replace them before any shared deployment.
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: delily
+      POSTGRES_USER: delily
+      POSTGRES_PASSWORD: delily_dev_only
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U delily -d delily"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  # Optional filter sidecars. Start with:
+  #   docker compose --profile filters up -d
+  rspamd:
+    image: rspamd/rspamd:latest
+    profiles: ["filters"]
+
+  clamav:
+    image: clamav/clamav:stable
+    profiles: ["filters"]
+    volumes:
+      - clamav-data:/var/lib/clamav
+
+volumes:
+  postgres-data:
+  clamav-data:
